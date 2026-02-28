@@ -1,0 +1,113 @@
+.panel {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease;
+
+  &:hover { box-shadow: var(--shadow-md); }
+
+  .header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+
+    h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .headerIcon {
+        color: var(--accent-blue);
+        display: flex;
+      }
+    }
+  }
+
+  .body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+}
+
+.langHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .langName {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .dialectHint {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    padding: 3px 10px;
+    background: var(--surface-elevated);
+    border-radius: 99px;
+    font-weight: 500;
+  }
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  .metric {
+    padding: 12px 14px;
+    background: var(--surface-elevated);
+    border-radius: var(--radius-sm);
+
+    .metricLabel {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .metricValue {
+      font-size: 1.05rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      margin-top: 3px;
+    }
+  }
+}
+
+.contextBar {
+  padding: 12px 14px;
+  background: var(--surface-elevated);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.76rem;
+  transition: background 0.15s ease;
+
+  &:hover { background: #f0f1f3; }
+
+  .contextIcon {
+    font-size: 1rem;
+    display: flex;
+    color: var(--text-muted);
+  }
+
+  .contextText {
+    color: var(--text-secondary);
+  }
+}
