@@ -1,0 +1,181 @@
+.panel {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease;
+
+  &:hover { box-shadow: var(--shadow-md); }
+
+  .header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+
+    h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .headerIcon {
+        color: var(--risk-low);
+        display: flex;
+      }
+    }
+  }
+
+  .body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+}
+
+.healthGauge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: var(--surface-elevated);
+  border-radius: var(--radius-sm);
+
+  .ring {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    border: 3px solid;
+  }
+
+  .healthInfo {
+    flex: 1;
+
+    .healthLabel {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .healthSubtext {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      margin-top: 3px;
+    }
+  }
+}
+
+.biasSignals {
+  .biasTitle {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .biasList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .biasItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: var(--surface-elevated);
+    border-radius: var(--radius-sm);
+    font-size: 0.76rem;
+    transition: all 0.18s ease;
+
+    &:hover {
+      background: #f0f1f3;
+      transform: translateX(2px);
+    }
+
+    .biasDot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .biasType {
+      font-weight: 600;
+      min-width: 85px;
+    }
+
+    .biasDesc {
+      color: var(--text-secondary);
+      flex: 1;
+    }
+  }
+}
+
+.conflictBlock {
+  padding: 12px 14px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius-sm);
+
+  .conflictTitle {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent-amber);
+    margin-bottom: 5px;
+  }
+
+  .conflictLabels {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+
+    span {
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      background: #fef3c7;
+      border-radius: 99px;
+      color: #92400e;
+    }
+  }
+
+  .resolution {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+  }
+}
+
+.poisonWarning {
+  padding: 12px 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  color: var(--risk-high);
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
