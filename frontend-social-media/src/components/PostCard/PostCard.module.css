@@ -1,0 +1,279 @@
+.post {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-light);
+  transition: background 0.15s;
+  cursor: default;
+}
+
+.post:hover {
+  background: rgba(0, 0, 0, 0.015);
+}
+
+/* ── Avatar ───────────────────────────────────────────────────── */
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--surface-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ── Body ─────────────────────────────────────────────────────── */
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.handle {
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+
+.dot {
+  color: var(--text-tertiary);
+  font-size: 0.7rem;
+}
+
+.time {
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+
+.typeBadge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 99px;
+  background: var(--surface-hover);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Content ──────────────────────────────────────────────────── */
+
+.content {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* ── Actions bar ──────────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  gap: 0;
+  margin-top: 10px;
+  max-width: 380px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  padding: 6px 0;
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  transition: color 0.15s;
+}
+
+.actionBtn:hover {
+  color: var(--accent);
+}
+
+.actionBtn:hover .actionIcon {
+  background: var(--accent-light);
+}
+
+.actionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: background 0.15s;
+}
+
+/* ── Moderation section ───────────────────────────────────────── */
+
+.moderationSection {
+  margin-top: 10px;
+}
+
+.analyzeBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--accent-light);
+  color: var(--accent);
+  transition: all 0.2s;
+}
+
+.analyzeBtn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
+}
+
+.analyzeBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Moderation Result ────────────────────────────────────────── */
+
+.modResult {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+}
+
+.modHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.modDecision {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.modDecision.allow {
+  background: var(--mod-allow-bg);
+  color: var(--mod-allow);
+}
+.modDecision.flag {
+  background: var(--mod-flag-bg);
+  color: var(--mod-flag);
+}
+.modDecision.escalate {
+  background: var(--mod-escalate-bg);
+  color: var(--mod-escalate);
+}
+.modDecision.delay {
+  background: var(--mod-delay-bg);
+  color: var(--mod-delay);
+}
+
+.modMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modScore {
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
+.modConfidence {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: var(--surface-hover);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.modExplanation {
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.modSignals {
+  margin-top: 6px;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.signalChip {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: var(--surface-hover);
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+/* ── Analyzing spinner ────────────────────────────────────────── */
+
+.analyzing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--accent-light);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* ── Error ─────────────────────────────────────────────────────── */
+
+.modError {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  background: var(--mod-flag-bg);
+  color: var(--mod-flag);
+  font-size: 0.8rem;
+  font-weight: 500;
+}

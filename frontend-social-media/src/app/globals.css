@@ -1,0 +1,100 @@
+/* ── CSS Reset & Global Theme ────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* surfaces */
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --surface-hover: #f0f2f5;
+  --border: #e4e6ea;
+  --border-light: #f0f0f0;
+
+  /* text */
+  --text-primary: #0f1419;
+  --text-secondary: #536471;
+  --text-tertiary: #8899a6;
+
+  /* brand */
+  --accent: #1d9bf0;
+  --accent-hover: #1a8cd8;
+  --accent-light: #e8f5fd;
+
+  /* moderation */
+  --mod-allow: #00ba7c;
+  --mod-allow-bg: #edfcf5;
+  --mod-flag: #f4212e;
+  --mod-flag-bg: #fef2f2;
+  --mod-escalate: #ff7a00;
+  --mod-escalate-bg: #fff8ed;
+  --mod-delay: #8b5cf6;
+  --mod-delay-bg: #f5f0ff;
+
+  /* misc */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}

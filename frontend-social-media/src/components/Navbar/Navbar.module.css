@@ -1,0 +1,140 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+}
+
+/* ── Brand ────────────────────────────────────────────────────── */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s;
+}
+
+.brand:hover {
+  background: var(--accent-light);
+}
+
+.logoIcon {
+  color: var(--accent);
+}
+
+.brandName {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+/* ── Nav Item ─────────────────────────────────────────────────── */
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background: var(--surface-hover);
+}
+
+.navItem.active {
+  font-weight: 700;
+}
+
+.navItemIcon {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.active .navItemIcon {
+  color: var(--text-primary);
+}
+
+/* ── Spacer ───────────────────────────────────────────────────── */
+
+.spacer {
+  flex: 1;
+}
+
+/* ── User Pill ────────────────────────────────────────────────── */
+
+.userPill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 99px;
+  transition: background 0.15s;
+  cursor: default;
+}
+
+.userPill:hover {
+  background: var(--surface-hover);
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.userName {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.userHandle {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .brandName,
+  .navLabel,
+  .userInfo {
+    display: none;
+  }
+
+  .brand {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .navItem {
+    justify-content: center;
+    padding: 14px;
+  }
+
+  .userPill {
+    justify-content: center;
+    padding: 10px;
+  }
+}
